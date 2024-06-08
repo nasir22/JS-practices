@@ -1,0 +1,23 @@
+"use strict"; // treats all JS code as newer version
+
+//alert('hello') // we are using node js this alert function can be used in dom //
+
+
+let name = "nasir"
+let age = 18
+let isLoggedIn = false
+
+// number => 2 to power 53
+// bigint
+// string => ""
+// boolean => true/false
+// null => standalone value / empty
+// undefined => means the value hasnt been defined yet
+
+//symbol => unique
+
+//object
+
+console.log(typeof undefined); 
+  //undefined is a type undefined
+console.log(typeof null); //null is an object
