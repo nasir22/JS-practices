@@ -1,0 +1,28 @@
+let score = "33abd"
+
+console.log(typeof score);
+console.log(typeof(score));
+
+let valueInNumber = Number(score);
+console.log(typeof valueInNumber);
+console.log(valueInNumber);
+
+
+//"33" gets converted easily in number
+//"33abd" gives us NaN not a number its type is number but actually its NaN
+//"if value is True it gives us 1 and False gives us 0"
+
+
+let isLoggedIn = "nasir"
+
+let booleanIsLoggedIn = Boolean(isLoggedIn);
+console.log(booleanIsLoggedIn);
+
+//if the input is 1 its converted in true 
+// if empty string "" is used it gives false as output
+//if non empty string is given then it gives true
+
+let someNumber = 33
+let stringNumber = String(someNumber);
+console.log(stringNumber);
+console.log(typeof stringNumber);
