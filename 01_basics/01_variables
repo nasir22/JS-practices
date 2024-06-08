@@ -1,0 +1,24 @@
+const accountId = 14453
+let accountEmail ="adnaey377@gmail.com"
+var accountPassword = "12345"
+
+accountCity = "kashmir" /*in js we can resercve the mem for any variable without using the keyword let, const but this way is not legit
+
+let accountState; /* the output of this will be undefined bcz js assumes it undefined unless its intiaized with some value  
+
+
+// accountId = 2 //not allowed bcz assignment is done here on constant variable
+
+// accountEmail = "nasir6278@gmail.com"
+
+accountPassword = "54321"
+
+accountCity = "sopore"
+
+console.table([accountPassword, accountCity, accountState]) /* console.table prints all the datta in tabular form hence optimizes the unnecessary writting of cosole.log for printing every statement*/
+
+console.log(accountEmail);
+
+console.log(accountId);
+
+/*the difference between "let", "var" is issue in block scope and functional scope in js if we changed the value of variable declared as var the in any function all the variables with that object name will be changed thats why we use let instead of var
