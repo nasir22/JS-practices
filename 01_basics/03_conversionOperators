@@ -1,11 +1,11 @@
 let score = "33abd"
 
-console.log(typeof score);
-console.log(typeof(score));
+// console.log(typeof score);
+// console.log(typeof(score));
 
 let valueInNumber = Number(score);
-console.log(typeof valueInNumber);
-console.log(valueInNumber);
+// console.log(typeof valueInNumber);
+// console.log(valueInNumber);
 
 
 //"33" gets converted easily in number
@@ -16,7 +16,7 @@ console.log(valueInNumber);
 let isLoggedIn = "nasir"
 
 let booleanIsLoggedIn = Boolean(isLoggedIn);
-console.log(booleanIsLoggedIn);
+// console.log(booleanIsLoggedIn);
 
 //if the input is 1 its converted in true 
 // if empty string "" is used it gives false as output
@@ -24,5 +24,12 @@ console.log(booleanIsLoggedIn);
 
 let someNumber = 33
 let stringNumber = String(someNumber);
-console.log(stringNumber);
-console.log(typeof stringNumber);
+// console.log(stringNumber);
+// console.log(typeof stringNumber);
+
+/************************Operations*********************/
+
+let value = 3
+let negValue = -value
+
+console.log(value)
