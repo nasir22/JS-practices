@@ -1,5 +1,7 @@
 //************ */ primitive data types *************//
 
+// primitive data type uses stack memory 
+
 // 7 types : String, Number, Boolean, null, Undefined, Symbol, BigInt
 
 
@@ -25,6 +27,7 @@ const bigNumber = 343434343433333333343n
 
 //************ */ Reffernece type (Non primitive )***************//
 
+// reference type / non-primitive uses heap memory
 //Array, Objects, Functions
 
 // array declaration
