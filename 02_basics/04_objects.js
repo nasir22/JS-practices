@@ -46,7 +46,7 @@ let proffesion = {
     ...persons,
     ...Comp
 };
-console.log(proffesion);
+//console.log(proffesion);
 
 //If objects have a property with the same name, then the right-most object property overwrites the previous one. For example:
 
@@ -65,7 +65,7 @@ let remoteJob = {
     ...location
 };
 
-console.log(remoteJob);
+//console.log(remoteJob);
 
 
 // 2: another is through assign method
@@ -99,16 +99,40 @@ let users = [
     }
 ]
 
-// this is how we will apply array methods on objects 
-console.log(users[1].email);
+// this is how we will apply array methods on objects
+
+//console.log(users[1].email);
 
 // here the datatype of the keys and values are array now we can apply array methods as well 
 
-console.log(tinderUser);
+//console.log(tinderUser);
 
-console.log(Object.keys(tinderUser))
-console.log(Object.values(tinderUser))
-console.log(Object.entries(tinderUser))
+//console.log(Object.keys(tinderUser))
+//console.log(Object.values(tinderUser))
+//console.log(Object.entries(tinderUser))
 
 // whenever we want to check if this property exists in object or not 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+//console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+
+//  object de-structure
+
+const course = {
+    coursename: "js investigation",
+    price: "999",
+    courseInstructor: "Nasir"
+}
+
+//course.courseInstructor
+
+// object destructuring 
+const{courseInstructor} = course
+console.log(courseInstructor)
+// or 
+const{courseInstructor: instructor} = course
+console.log(instructor)
+
+// the benefit of object de structuring is that we dont have to everytime call the object method like "course.courseInstructor" to print it
+
+ 
