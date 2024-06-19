@@ -8,7 +8,7 @@ if(true){
     let a = 10
     const b = 34
     var c = 48 
-    console.log("block scope value of 'a':", a);
+    //console.log("block scope value of 'a':", a);
     
 }
 
@@ -18,10 +18,10 @@ if(true){
 //console.log(b);
 
 // global scope value of 'a'
-console.log("global scope value of 'a':", a)
+//console.log("global scope value of 'a':", a)
 
 
-console.log(c);
+//console.log(c);
 // var got printed because it is in global scope so the problem with var is if some other varaible is declared with same name using var the newer replaces trhe previous value for an exapmle if we declared the same variable in global scope it will be changed with the next declared same varaibale name 
 
 
@@ -35,10 +35,27 @@ console.log(c);
     const username = "nasir"
     function two(){
         const website = "youtube"
-        console.log(username)
+       // console.log(username)
     }
-    console.log(website)
+    //console.log(website)
     two()
  }
  
  one()
+
+
+ // mini hoisting
+
+ console.log(addone(5))
+
+ function addone(num){
+    return num + 1
+ }
+
+ console.log(addTwo(8))
+
+ // here we defined a function and holded it into a variable
+ 
+ const addTwo = function(num){
+    return num + 2 
+ }
