@@ -54,7 +54,7 @@ if (balance > 500) console.log("test")
 // }
 
 
-// foe checking multiple conditions 
+// for checking multiple conditions 
 
 const userLoggedIn = true
 const debitCard = true
@@ -62,10 +62,10 @@ const debitCard = true
 const loggedInFromGoogle = true
 const loggedInFromEmail = true
 
-// the && statement lets you check both statements at the same time 
+// the && statement lets you check both statements at the same time and it will only return true if both the statements are true 
 if (userLoggedIn && debitCard) console.log("allow user to buy");
 
-// the or statement ||lets you check from multiple statements
+// the or statement ||lets you check from multiple statements the or statement will return true if only one statement will be true 
 
 if (loggedInFromGoogle || loggedInFromEmail){
     console.log("user logged in ")
