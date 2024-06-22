@@ -17,6 +17,7 @@ for (const greet of greetings) {
 
 // maps is an object type that has a key value pair takes unique values and duplicate entries are not allowed 
 
+//map() transforms every element in an array individually and creates a new array.
 
 const map = new Map()
 
