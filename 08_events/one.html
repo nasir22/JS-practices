@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+
+    // we are selecting the owl element using dom selectors and apllying onclick method the onclick method has no issues but it gives less features thats why we use event listeners 
+
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+
+    // these two methods below were used previously
+     // attachEvent()
+    // jQuery - on
+
+    // events to learn 
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    //*************** event propagation :- capturing and bubbling up modes are two concepts in events when we pass the false as default then bubling is activated bubbling up means that it goes from bottom to top when we click on the owl the first one to get prited is owl clicked beacuse thats inside the li and li is inside the ul after that ul gets clicked 
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // capturing mode is activated when we explicitly mention true it works from top to bottom here first the ul gets clicked then the content which is inside the ul i.e owl
+
+    
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, true)
+
+
+    // stopPropagation method stops the bubling up process if we used this then only the owl will be clicked 
+    
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, false)
+    
+
+    // prevent default prevents the defualt functionality to run if we noew click on google it wont redirect us to the google page
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+   
+    
+
+    // whenever we will click on the image that image shoukd be removed 
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    
+        
+    }, false)
+    // another method of removing the nodes 
+    //removeIt.parentNode.removeChild(removeIt)
+</script>
+</html>
