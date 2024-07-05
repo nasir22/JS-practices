@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> random color changer </h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+
+<script>
+
+
+// here we are generating random hex codes hex codes start with # and 6 digit number thats why we are iterating the loop for 6 times and then the number generated will be concatenated with color that contains # thats how we get the hex codes 
+
+    const randomColor = function () {
+        const hex = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    };
+
+    // here we created a method startChangingColor that checks if the intervalId is not null then it will perform the setInterval method that takes cahngeBgColor function and a timeinterval
+
+    let intervalId;
+    const startChangingColor = function(){
+        if (!intervalId){
+            intervalId = setInterval(changeBgColor, 1000)
+        }
+        
+    }
+
+    // here we created a method stopChangingColor that clears the interval by taking a clearInterval method which takes intervalId as parm
+
+    const stopChangingColor = function(){
+        clearInterval(intervalId)
+        intervalId = null;
+    }
+
+    // here we created a changeBgColor function that contains the randomColor function by which the bodys color gets changed 
+
+    function changeBgColor () {
+        document.body.style.backgroundColor = randomColor();
+    }
+
+
+    // here we created a start button and we added the click event and startChangingColor method to it 
+    document.querySelector("#start").addEventListener("click", startChangingColor)
+
+    //here we created a stop button add added a click event that takes stopchangingColor method as param 
+    document.querySelector("#stop").addEventListener("click", stopChangingColor)
+
+    
+
+</script>
+
+</html>
