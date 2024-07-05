@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>chai aur javascript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+
+<script>
+
+    // this is hardcoded value injection
+
+    // const dateNew = function(){
+    //    console.log("nasir", Date.now())
+    // }
+    // setInterval(dateNew , 2000)
+
+    // here we can pass str as a string and then pass the arguments in the function call of set interval gthat means it takes 3rd parameter as well
+
+    // const dateNew = function(str){
+    //   // console.log(str, Date.now())
+    // }
+    // setInterval(dateNew , 2000, "hi")
+
+
+
+     // here we are trying to give the atart and stop the functionality of starting the interval and then stopping the interval when click on the respective buttons
+
+
+    // global declaration
+    let startInterval ;
+
+    const dateNew = function () {
+        console.log("nasir", Date.now())
+    }
+    document.querySelector("#start").addEventListener("click", function () {
+        startInterval = setInterval(dateNew, 1000)
+        console.log("started")
+    })
+
+
+    document.querySelector("#stop").addEventListener("click", function () {
+        clearInterval(startInterval);
+        console.log("stopped")
+    })
+</script>
+
+</html>

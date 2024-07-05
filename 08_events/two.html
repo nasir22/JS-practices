@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>coding hall</h1>
+    <button id="stop">stop</button>
+</body>
+
+<script>
+    setTimeout(function(){
+        console.log("hi Nasir")
+    },2000)
+
+    // another way of implementing settimeout
+
+    const myName = function(){
+        console.log("hi Nasir")
+    }
+    setTimeout(myName , 2000)
+
+
+
+    // here we used set timeout and changed the h1 innerhtml after 2 seconds 
+
+    // and then we used cleartimeout by targetting the button if we click the stop button within the time given to perform the setimeout event then the event will never occur and the function will never run and the h1 would never chnage 
+    const text = function(){
+        document.querySelector("h1").innerHTML = "welcome to coding blogs"
+
+    }
+    const changeTime = setTimeout(text, 2000)
+
+    document.querySelector("#stop").addEventListener('click' , function(){
+        clearTimeout(changeTime)
+        console.log("stopped")
+    } )
+    
+</script>
+</html>
