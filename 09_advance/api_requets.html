@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- states of xmlhttpreq
+    0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete. -->
+</body>
+
+<script>
+    // xmlhttprequest is a method which contains all thye states like readystate etc and by this we can send our data and recieve our data
+
+    // its also a class and we tend to make an object from this by using 'new' keyword
+    const requestUrl = 'https://randomuser.me/api/'
+   const req = new XMLHttpRequest()
+   req.open('GET', requestUrl)
+   req.onreadystatechange =  function(){
+    console.log(req.readyState)
+    if(req.readyState === 4){
+        const data = JSON.parse(this.responseText) 
+        console.log(data.password)
+    }
+   }
+  
+   req.send()
+</script>
+</html>
